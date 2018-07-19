@@ -5,7 +5,7 @@ Ryanair - Task 2 - Java/Spring - Interconnecting Flights
 This is my implementation of the Interconnecting Flights problem. It has been developed in Java 8, as a Spring Boot application. 
 The application can be packaged by Maven as a WAR (`mvn clean package`) and expected to be deployed on Tomcat (v9.0.10 recommended).
 
-Declarative REST clients (using Feign) have been developed to consume Ryanair microservices API and it provides a simple Spring MVC REST controller to expose the endpoint API required which can be reached at : 
+Declarative REST clients (using Feign) have been developed to consume Ryanair microservices API while providing a simple Spring MVC REST controller to expose the endpoint API required which can be reached at : 
 
 http://localhost:8080/interconnecting-flights/interconnections
 
