@@ -9,6 +9,15 @@ Declarative REST clients (using Feign) have been developed to consume Ryanair mi
 
 http://localhost:8080/interconnecting-flights/interconnections
 
+## Solution
+In order to solve the Interconnecting Flights problem it has been divided in two steps.
+In the first step, during bootstrap, all possible routes between airports are retrieved at once and a directed graph is built. Using Djikstra algorithm, all paths of the desired size are retrieved (in this case a maximum of 1 interconnected flight i.e. 3 nodes). In order to speed up development the excellent [JgraphT library](https://jgrapht.org/) has been used. 
+In the second step, for each possible path, all compatible flights are retrieved. In case of direct flights (paths of 2 nodes) , directly the departure/arrival date and times are checked.
+In case of interconnected flights, an additional check is performed taking into account a minimum delay of 2h between previous arrival and next departure.
+
+## Known Limitations
+Obviously, the implementation is not generic enough. It is only intended to be used for paths with 1 maximum stop. In case arbitrary sizes were required it is recommended to swith the Connections Analyzer implementation and use some more advanced reasoning logic as for example using an inference engine [JBoss Drools](https://www.drools.org/) which would provide a robust and fast decision tree (RETE) with external business logic execution (rules) over simpler cartesian product handcrafted implementations in order to obtain all possible permutations (interconnected flights). 
+
 ## Usage
 The interconnections service can be accesed using the following URL pattern : 
 
