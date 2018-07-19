@@ -19,6 +19,9 @@ In case of interconnected flights, an additional check is performed taking into 
 Obviously, the implementation is not generic enough. It is only intended to be used for paths with 1 maximum stop. In case arbitrary sizes were required it is recommended to replace the Connections Analyzer interface implementation and use some more advanced reasoning logic. This can be done, for example, using an inference engine [JBoss Drools](https://www.drools.org/) which would provide a robust and fast decision tree (RETE) with external business logic execution (rules). This is clearly a way more performant solution over simpler cartesian product handcrafted implementations when trying to obtain all possible permutations (interconnected flights). 
 
 ## Usage
+
+A prepackaged WAR can be downloaded from : https://github.com/pnavais/interconnecting-flights/releases
+
 The interconnections service can be accesed using the following URL pattern : 
 
 http://localhost:8080/interconnecting-flights/interconnections?departure=DEPARTURE_AIRPORT&arrival=ARRIVAL_AIRPORT&departureDateTime=DEPARTURE_DATE&arrivalDateTime=ARRIVAL_DATE
