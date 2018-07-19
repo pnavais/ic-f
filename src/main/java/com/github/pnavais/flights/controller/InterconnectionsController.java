@@ -80,24 +80,28 @@ public class InterconnectionsController {
         logger.info("Departure Time =>  {}", departureDateTime);
         logger.info("Arrival Time   =>  {}", arrivalDateTime);
 
-        // Find all available paths
-        List<FlightPath> pathList = connectionAnalyzer.findPaths(srcAirport, targetAirport, DEFAULT_MAX_ROUTE_SIZE);
-
-        logger.info("Found {} paths between {} and {}", pathList.size(), srcAirport, targetAirport);
-
 
         List<FlightConnection> connections = new ArrayList<>();
 
-        // Find all valid connection flights for each route
-        pathList.forEach(flightPath -> {
+        // Check dates are consistent
+        if (arrivalDateTime.compareTo(departureDateTime)>=0) {
 
-            logger.info("Analyzing path : [ {} ]", flightPath);
+            // Find all available paths
+            List<FlightPath> pathList = connectionAnalyzer.findPaths(srcAirport, targetAirport, DEFAULT_MAX_ROUTE_SIZE);
 
-            // Find valid legs for the route
-            connections.addAll(connectionAnalyzer.findValidConnections(flightPath.toRoutes(), departureDateTime,
-                    arrivalDateTime));
+            logger.info("Found {} paths between {} and {}", pathList.size(), srcAirport, targetAirport);
 
-        });
+            // Find all valid connection flights for each route
+            pathList.forEach(flightPath -> {
+
+                logger.info("Analyzing path : [ {} ]", flightPath);
+
+                // Find valid legs for the route
+                connections.addAll(connectionAnalyzer.findValidConnections(flightPath.toRoutes(), departureDateTime,
+                        arrivalDateTime));
+
+            });
+        }
 
         return connections;
     }
