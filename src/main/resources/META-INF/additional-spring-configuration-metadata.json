@@ -1,0 +1,28 @@
+{
+  "properties": [
+    {
+      "name": "routes.endpoint.url",
+      "type": "java.lang.String",
+      "description": "Endpoint for the Routes API."
+    },
+    {
+      "name": "schedules.endpoint.url",
+      "type": "java.lang.String",
+      "description": "Endpoint for the Schedules API."
+    },
+    {
+      "name": "http.proxy.enable",
+      "type": "java.lang.String",
+      "description": "Enables/Disables HTTP proxy"
+    },
+    {
+      "name": "http.proxy.host",
+      "type": "java.lang.String",
+      "description": "Defines the HTTP proxy host"
+    },
+    {
+      "name": "http.proxy.port",
+      "type": "java.lang.String",
+      "description": "Defines the HTTP proxy port"
+    }
+  ] }
