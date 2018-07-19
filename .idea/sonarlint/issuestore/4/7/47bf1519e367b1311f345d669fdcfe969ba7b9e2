@@ -1,12 +1,0 @@
-
-`squid:UselessImportCheck"0Remove this unused import 'java.time.LocalDate'.(›‘¬èıÿÿÿÿ8ş³ø”Ë,
-Rsquid:S1481@"/Remove this unused "flightDays" local variable.(àÂåóşÿÿÿÿ8Ÿı•Ë,
-Usquid:S1481C"2Remove this unused "originAirport" local variable.(Ô¯ì¯øÿÿÿÿ8­ÿ©‘Ë,
-csquid:S1854D"FRemove this useless assignment to local variable "destinationAirport".(‚ê?8­ÿ©‘Ë,
-bsquid:UselessImportCheck"8Remove this unused import 'org.apache.tomcat.jni.Local'.(å¡.8ş³ø”Ë,
-dsquid:S1854C"ARemove this useless assignment to local variable "originAirport".(Ô¯ì¯øÿÿÿÿ8• ©‘Ë,
-hsquid:UselessImportCheck"8Remove this unused import 'java.util.stream.Collectors'.(Óóº´úÿÿÿÿ8ƒƒª”Ë,
-Tsquid:S1481D"7Remove this unused "destinationAirport" local variable.(‚ê?8­ÿ©‘Ë,
-Usquid:S1481L"2Remove this unused "scheduledLegs" local variable.(€”ëøÿÿÿÿ8ª‘•Ë,
-_squid:UselessImportCheck"/Remove this unused import 'java.util.Optional'.(¨˜ëİüÿÿÿÿ8†•Ë,
-asquid:S1854@">Remove this useless assignment to local variable "flightDays".(àÂåóşÿÿÿÿ8Ÿı•Ë,
