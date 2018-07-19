@@ -16,7 +16,7 @@ In the second step, for each possible path, all compatible flights are retrieved
 In case of interconnected flights, an additional check is performed taking into account a minimum delay of 2h between previous arrival and next departure.
 
 ## Known Limitations
-Obviously, the implementation is not generic enough. It is only intended to be used for paths with 1 maximum stop. In case arbitrary sizes were required it is recommended to replace the Connections Analyzer interface implementation and use some more advanced reasoning logic. This can be done, for example, using an inference engine [JBoss Drools](https://www.drools.org/) which would provide a robust and fast decision tree (RETE) with external business logic execution (rules). This is clearly a way more performant solution over simpler cartesian product handcrafted implementations when trying to obtain all possible permutations (interconnected flights). 
+Obviously, the implementation is not generic enough. It is only intended to be used for paths with 1 maximum stop. In case arbitrary sizes were required it is recommended to replace the Connections Analyzer interface implementation and use some more advanced reasoning logic. This can be done, for example, using an inference engine as [JBoss Drools](https://www.drools.org/) which would provide a robust and fast decision tree (RETE) with external business logic execution (rules). This is clearly a way more performant solution over simpler cartesian product handcrafted implementations when trying to obtain all possible permutations (interconnected flights). 
 
 ## Usage
 
